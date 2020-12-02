@@ -19,9 +19,10 @@ let pokemonList = [
     }
 ];
 
-for (let i = pokemonList; i == name; i++) {
-    console.log(i).name
-    document.write(pokemonList.name);
+for (let i = 0; i < pokemonList.length; i++){
+    const pokemon = pokemonList[i];
+    console.log(pokemon)
+    document.write(pokemon.name && pokemon.height);
 }
 
 

@@ -5,24 +5,24 @@ let pokemonList = [
     {
       name: 'Arcanine',
       height: 1.9,
-      type: ['flashfire', 'intimidate', 'justified']
+      types: ['flashfire', 'intimidate', 'justified']
     },
     {
       name: 'Aggron',
-      height: 2.1,
-      type: ['sturdy', 'rock-head', 'heavy-metal']
+      height: '2.1',
+      types: ['sturdy', 'rock-head', 'heavy-metal']
     },
     {
       name: 'Scyther',
       height: 1.5,
-      type: ['swarm', 'steadfast', 'technician']
+      types: ['swarm', 'steadfast', 'technician']
     }
 ];
 
 for (let i = 0; i < pokemonList.length; i++){
     const pokemon = pokemonList[i];
     console.log(pokemon)
-    document.write(pokemon.name && pokemon.height);
+    document.write(pokemon.name);
 }
 
 

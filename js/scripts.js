@@ -26,6 +26,6 @@ for (let i = 0; i < pokemonList.length; i++){
 // define specific pokemon as a big pokemon
 if (pokemon.height > 2.0) {
     console.log("Wow, that\'s big!");
-    document.write("-" + "Wow that\'s big!")
+    document.write("-" + "Wow that\'s big!");
   }
 }

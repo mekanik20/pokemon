@@ -1,8 +1,7 @@
 //pokemon array IIFE
-(function () {
 let myVariable = 'pokemonList';
 console.log(typeof myVariable);
-let pokemonList = [
+let pokemonList = (function () { [
     {
       name: 'Arcanine ',
       height: 1.9,
@@ -22,22 +21,21 @@ let pokemonList = [
 console.log(pokemonList);
 
 // forEach() loop logging details of pokemonList
-let pokemonList = ['Arcanine', 'Aggron', 'Scyther'];
-funtion myLoopFunction(pokemon) {
+//let pokemonList = ['Arcanine', 'Aggron', 'Scyther'];
+pokemonList.forEach(function(pokemon) {
   console.log(pokemon.name + ' is ' + pokemon.height + ' meters tall ' + ' - ' + "types: " + pokemon.types);
-}
-pokemonList.forEach(myLoopFunction);
+});
 
 //pokemonRepository variable
 let pokemonRepository = (function () {
-  let pokemonList= [];
+  let privatePokemonList= [];
 
   function add(item) {
-    pokemonList.push(item);
+    privatePokemonList.push(item);
   }
 
   function getAll() {
-    return pokemonList;
+    return privatePokemonList;
   }
 
   return {

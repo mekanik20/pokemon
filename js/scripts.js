@@ -1,29 +1,24 @@
 //pokemon array IIFE
-//let myVariable = 'pokemonList';
-//console.log(typeof myVariable);
+let myVariable = 'pokemonList';
+console.log(typeof myVariable);
 let pokemonRepository = (function () {
   let pokemonList = [
     {
-      name: 'Arcanine ',
+      name: ' Arcanine- ',
       height: 1.9,
-      types: ['flashfire', 'intimidate', 'justified'],
+      types: [' flashfire', ' intimidate', ' justified'],
     },
     {
-      name: ' Aggron ',
+      name: ' Aggron- ',
       height: 2.1,
-      types: ['sturdy', 'rock-head', 'heavy-metal'],
+      types: [' sturdy', ' rock-head', ' heavy-metal'],
     },
     {
-      name: ' Scyther ',
+      name: ' Scyther- ',
       height: 1.5,
-      types: ['swarm', 'steadfast', 'technician'],
+      types: [' swarm', ' steadfast ', ' technician'],
     }
   ];
-
-// forEach() loop logging details of pokemonList
-pokemonList.forEach(function(pokemon) {
-  document.write("<h1>" + pokemon.name + "</h1>")
-});
   
   function add(item) {
     pokemonList.push(item);
@@ -38,6 +33,11 @@ pokemonList.forEach(function(pokemon) {
     getAll: getAll
   };
 })();
+
+// forEach() loop logging details of pokemonList
+pokemonRepository.getAll().forEach(function(pokemon) {
+  document.write("<h1>" + pokemon.name + pokemon.types + "</h1>")
+});
 
 console.log(pokemonRepository.getAll());
 pokemonRepository.add({ name: 'Pikachu' });

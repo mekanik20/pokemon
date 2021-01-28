@@ -4,7 +4,7 @@
 //loadList() and loadDetails() added
 let pokemonRepository = (function () {  
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.com/api/v2/pokemon/?limit=150';
+  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
   
   //adding of pokemon(s)
   function add(pokemon) {
@@ -33,7 +33,6 @@ let pokemonRepository = (function () {
     pokemonList.appendChild(listpokemon);  
    // event listener for button click
     button.addEventListener("click", function(event){
-      showDetails(pokemon.name);
       showDetails(pokemon);
     });
   }
@@ -62,14 +61,18 @@ let pokemonRepository = (function () {
     }).then(function (details) {
       pokemon.imageUrl = details.sprites.front_default;
       pokemon.height = details.height;
-      pokemon.types = details.types;
-    }).catch(function (e) {
+      pokemon.types = [];
+      details.types.forEach(function (pokemonTypes) {
+        pokemon.types.push(pokemonTypes.type.name);
+      });
+    })
+    .catch(function (e) {
       console.error(e);
     });
   }
  
   function showDetails(pokemon) {
-    pokemonRepository.loadDetails(pokemon).then(funciton () {
+    pokemonRepository.loadDetails(pokemon).then(function () {
     console.log(pokemon);
     });
   }
@@ -78,9 +81,10 @@ let pokemonRepository = (function () {
   return {
     add: add,
     getAll: getAll,
-    loadLIst: loadList,
+    loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails
+    showDetails: showDetails,
+    addListItem: addListItem
   };
 })();
 

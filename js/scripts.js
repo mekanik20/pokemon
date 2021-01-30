@@ -179,6 +179,9 @@ let pokemonRepository = (function() {
     modalContainer.innerHTML = '';
     let modal = document.createElement('div');
     modal.classList.add('modal');
+  
+    let modalContainer = document.querySelector('#image-container');
+    let myImage = document.createElement('img');
 
     // add the new modal content
     let closeButtonElement = document.createElement('button');

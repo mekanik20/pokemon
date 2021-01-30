@@ -11,6 +11,25 @@
     <ul class='pokemon-list'></ul>
     <script src="js/promise-polyfill.js"></script>
     <script src="js/fetch-polyfill.js"></script>
-    <script src="js/scripts.js"></script>    
+    <form id='register-form'>
+
+      <div class='input-wrapper'>
+        <label for='email'>E-mail</label>
+        <input id='email'>
+      </div>
+
+      <div class='input-wrapper'>
+        <label for='password'>Password</label>
+      </div>
+
+
+      <button>Register</button>
+
+    </form>
+    
+    <button id='show-modal'>Show modal</button>
+    <button id='show-dialog'>Show dialog</button>
+    <div id='modal-container'></div>  
+    <script src="js/scripts.js"></script>   
   </body>
 </html>

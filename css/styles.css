@@ -1,18 +1,23 @@
-/*.button {
-    background-color: #666666;
+html,
+body {
+    font-family:fantasy;
+}
+
+/* .button {
+    background-color: #ffffff;
     border: none;
-    color: white;
+    color: rgb(3, 95, 148);
     padding: 10px 20px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-}
+} */
 
-html,
-body {
-    font-family: Arial, sans-serif;
-}*/
+/* button:hover{
+  cursor: pointer;
+  opacity: 0.75;
+} */
 
 #modal-container {
   /*display: none;*/
@@ -22,7 +27,7 @@ body {
   margin: auto;
   display: inline-block;
   box-sizing: border-box;
-  background: #fff;
+  background: #ffffff;
   padding: 15px;
   width: 100%;
   max-width: 600px;

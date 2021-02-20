@@ -1,6 +1,7 @@
 html,
 body {
-    font-family:fantasy;
+  margin-top: 27px;
+  font-family:fantasy;
 }
 
 /* .button {
@@ -12,15 +13,15 @@ body {
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-} */
+}
 
-/* button:hover{
+ button:hover{
   cursor: pointer;
   opacity: 0.75;
-} */
+}
 
 #modal-container {
-  /*display: none;*/
+  /*display: none;
 }
 
 .modal {
@@ -56,4 +57,4 @@ body {
   margin-right: auto;
   width: 50%;
   height: auto;
-}
+}*/

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
-    <title>Pokedex App</title>    
+    <title>PokeDex</title>    
   </head>
 
   <body>
@@ -15,20 +15,28 @@
       <a class="navbar-brand" href="#">PokeDex</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
-    
+      </button>    
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
         </ul>
-        <form class="form-inline">
+        <!--search function to be installed at a later date here-->
+        <!--form class="form-inline">
           <input id="pokemon-search" oninput="searchPokemon()" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        </form-->
       </div>
     </nav>
 
     <!-- list of Pokemon-->
-    <div class="list-group list-group-item pokemon-list"></div>
+    <ul class="list-group pokemon-list"></ul>
+    
+    <main class="page-main flex-grow-1">
+      <section class="pokedex ">	
+          <ul class="pokemon-list d-flex flex-wrap p-0"></ul>
+      </section>
+      <section class="detail-modal-container">
+      </section>
+  </main>
 
     <!-- Modal -->
     <div class="modal fade" id="pokemon-info" tabindex="-1" role="dialog" aria-labelledby="pokemon-name" aria-hidden="true">
